@@ -37,9 +37,9 @@ O **Smart Shopping** é uma plataforma de e-commerce criada para demonstrar o de
 
 | Nome Completo | Função | Responsabilidades |
 |---------------|--------|-------------------|
-| **[2°SGT Milioli - 2° Jonathan]** | **Desenvolvedor Full-Stack Frontend** | Desenvolvimento HTML, CSS, JavaScript, integração APIs, design responsivo |
-| **[2°SGT Milioli - 2° Jonathan]** | **UI/UX Designer** | Criação do layout, experiência do usuário, identidade visual |
-| **[2°SGT Milioli - 2° Jonathan]** | **Gerente de Projeto** | Planejamento, documentação, controle de qualidade |
+| **2°SGT Milioli - 2° Jonathan** | **Desenvolvedor Full-Stack Frontend** | Desenvolvimento HTML, CSS, JavaScript, integração APIs, design responsivo |
+| **2°SGT Milioli - 2° Jonathan** | **UI/UX Designer** | Criação do layout, experiência do usuário, identidade visual |
+| **2°SGT Milioli - 2° Jonathan** | **Gerente de Projeto** | Planejamento, documentação, controle de qualidade |
 
 *Substitua os nomes pelos integrantes reais do seu projeto*
 
