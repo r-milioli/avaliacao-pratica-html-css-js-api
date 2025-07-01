@@ -109,7 +109,7 @@ async function buscarCEP(cep) {
 
 1. **Clone o repositório:**
 ```bash
-git clone https://github.com/seu-usuario/smart-shopping.git
+git clone https://github.com/r-milioli/avaliacao-pratica-html-css-js-api.git
 cd smart-shopping
 ```
 
@@ -130,9 +130,9 @@ code .
 - O site abrirá automaticamente no navegador
 
 ### URLs Locais
-- **Home:** `http://127.0.0.1:5500/index.html`
-- **Sobre:** `http://127.0.0.1:5500/sobre.html`
-- **Contato:** `http://127.0.0.1:5500/contato.html`
+- **Home:** `http://127.0.0.1:3000/index.html`
+- **Sobre:** `http://127.0.0.1:3000/sobre.html`
+- **Contato:** `http://127.0.0.1:3000/contato.html`
 
 ## 📁 Estrutura do Projeto
 
