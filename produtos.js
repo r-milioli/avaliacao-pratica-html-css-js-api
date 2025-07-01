@@ -1,64 +1,127 @@
-// Função para carregar e exibir produtos
+// Carregar produtos do JSON
 async function carregarProdutos() {
     try {
-        // Busca os dados do arquivo JSON
+        // Buscar o JSON
         const response = await fetch('produtos.json');
         const data = await response.json();
         
-        // Pega o container onde os produtos serão inseridos
+        // Pegar o container
         const container = document.getElementById('produtos-container');
-        
-        // Limpa o container
         container.innerHTML = '';
         
-        // Cria cada produto dinamicamente
+        // Criar cada produto
         data.produtos.forEach(produto => {
-            const produtoDiv = criarProdutoHTML(produto);
-            container.appendChild(produtoDiv);
+            const div = document.createElement('div');
+            div.className = 'produto';
+            
+            div.innerHTML = `
+                <img src="${produto.imagem}" alt="${produto.nome}">
+                <h3>${produto.nome}</h3>
+                <p class="preco">R$ ${produto.preco}</p>
+                <p>${produto.descricao}</p>
+                <button onclick="comprar('${produto.nome}')">Comprar</button>
+            `;
+            
+            container.appendChild(div);
         });
         
     } catch (error) {
-        console.error('Erro ao carregar produtos:', error);
         document.getElementById('produtos-container').innerHTML = 
-            '<p>Erro ao carregar produtos. Tente novamente mais tarde.</p>';
+            '<p>Erro: Use um servidor local para carregar o JSON!</p>';
     }
 }
 
-// Função para criar o HTML de cada produto
-function criarProdutoHTML(produto) {
-    const produtoDiv = document.createElement('div');
-    produtoDiv.className = 'produto';
-    produtoDiv.setAttribute('data-categoria', produto.categoria);
-    
-    produtoDiv.innerHTML = `
-        <img src="${produto.imagem}" alt="${produto.nome}" onerror="this.src='img/placeholder.jpg'">
-        <h3>${produto.nome}</h3>
-        <h4>R$ ${produto.preco.toFixed(2).replace('.', ',')}</h4>
-        <p>${produto.descricao}</p>
-        <button class="btn-produto" onclick="comprarProduto(${produto.id})">Comprar</button>
-    `;
-    
-    return produtoDiv;
+// Função comprar
+function comprar(nome) {
+    alert('Produto ' + nome + ' adicionado!');
 }
 
-// Função para lidar com a compra (exemplo)
-function comprarProduto(id) {
-    alert(`Produto ${id} adicionado ao carrinho!`);
-    // Aqui você pode implementar a lógica real de compra
+
+//============================================================================================================
+
+// Variáveis do Slider
+let slideIndex = 1;
+let autoSlideTimer;
+
+// Função para mudar slide (botões anterior/próximo)
+function mudarSlide(n) {
+    mostrarSlide(slideIndex += n);
 }
 
-// Função para filtrar produtos por categoria (bônus)
-function filtrarPorCategoria(categoria) {
-    const produtos = document.querySelectorAll('.produto');
+// Função para ir para slide específico (dots)
+function slideAtual(n) {
+    mostrarSlide(slideIndex = n);
+}
+
+// Função principal do slider
+function mostrarSlide(n) {
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
     
-    produtos.forEach(produto => {
-        if (categoria === 'todos' || produto.getAttribute('data-categoria') === categoria) {
-            produto.style.display = 'block';
-        } else {
-            produto.style.display = 'none';
-        }
-    });
+    if (n > slides.length) { slideIndex = 1; }
+    if (n < 1) { slideIndex = slides.length; }
+    
+    // Remove classe ativo de todos
+    slides.forEach(slide => slide.classList.remove('ativo'));
+    dots.forEach(dot => dot.classList.remove('ativo'));
+    
+    // Adiciona classe ativo ao slide atual
+    if (slides[slideIndex - 1]) {
+        slides[slideIndex - 1].classList.add('ativo');
+    }
+    if (dots[slideIndex - 1]) {
+        dots[slideIndex - 1].classList.add('ativo');
+    }
 }
 
-// Carrega os produtos quando a página terminar de carregar
-document.addEventListener('DOMContentLoaded', carregarProdutos);
+// Função para slider automático
+function iniciarSliderAutomatico() {
+    autoSlideTimer = setInterval(() => {
+        slideIndex++;
+        mostrarSlide(slideIndex);
+    }, 5000); // Muda a cada 5 segundos
+}
+
+// Parar slider automático
+function pararSliderAutomatico() {
+    clearInterval(autoSlideTimer);
+}
+
+// Inicializar slider quando carregar a página
+function iniciarSlider() {
+    mostrarSlide(slideIndex);
+    iniciarSliderAutomatico();
+    
+    // Pausa o slider quando passa o mouse
+    const hero = document.querySelector('.hero');
+    if (hero) {
+        hero.addEventListener('mouseenter', pararSliderAutomatico);
+        hero.addEventListener('mouseleave', iniciarSliderAutomatico);
+    }
+}
+
+//==================================================================================================
+
+// Função para redes sociais
+function abrirRedeSocial(rede) {
+    switch(rede) {
+        case 'facebook':
+            alert('Redirecionando para Facebook!');
+            // window.open('https://facebook.com/smartshopping', '_blank');
+            break;
+        case 'instagram':
+            alert('Redirecionando para Instagram!');
+            // window.open('https://instagram.com/smartshopping', '_blank');
+            break;
+        case 'whatsapp':
+            alert('Abrindo WhatsApp: (11) 9999-9999');
+            // window.open('https://wa.me/5511999999999', '_blank');
+            break;
+    }
+}
+
+// Carregar quando a página abrir
+document.addEventListener('DOMContentLoaded', function() {
+    carregarProdutos();
+    iniciarSlider();
+});

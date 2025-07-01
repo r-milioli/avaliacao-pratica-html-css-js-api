@@ -2,35 +2,24 @@
     "produtos": [
       {
         "id": 1,
-        "nome": "Smartphone Galaxy S23",
-        "preco": 2499.99,
-        "descricao": "Smartphone com câmera tripla de 50MP, tela 6.1\" e 128GB",
-        "imagem": "img/produtos/smartphone.jpg",
-        "categoria": "eletrônicos"
+        "nome": "Whey Protein",
+        "preco": 1299.99,
+        "descricao": "Whey Protein",
+        "imagem": "img/imgProduto/produto1.jpg"
       },
       {
         "id": 2,
-        "nome": "Notebook Dell Inspiron",
-        "preco": 3299.99,
-        "descricao": "Notebook com Intel i5, 8GB RAM, SSD 256GB e tela 15.6\"",
-        "imagem": "img/imgProdutos/produto3.jpg",
-        "categoria": "eletrônicos"
+        "nome": "Creatine",
+        "preco": 2499.99,
+        "descricao": "Creatine",
+        "imagem": "img/imgProduto/produto2.jpg"
       },
       {
         "id": 3,
-        "nome": "Tênis Nike Air Max",
-        "preco": 399.99,
-        "descricao": "Tênis esportivo confortável para corrida e academia",
-        "imagem": "img/imgProdutos/produto1.jpg",
-        "categoria": "esportes"
-      },
-      {
-        "id": 4,
-        "nome": "Cafeteira Expresso",
-        "preco": 899.99,
-        "descricao": "Cafeteira automática com moedor integrado",
-        "imagem": "img/imgProdutos/produto2.jpg",
-        "categoria": "eletrodomésticos"
+        "nome": "BCAA",
+        "preco": 299.99,
+        "descricao": "BCA",
+        "imagem": "img/imgProduto/produto3.jpg"
       }
     ]
-  }
+}
