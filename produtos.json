@@ -2,35 +2,24 @@
     "produtos": [
       {
         "id": 1,
-        "nome": "Smartphone Galaxy S23",
-        "preco": 2499.99,
-        "descricao": "Smartphone com câmera tripla de 50MP, tela 6.1\" e 128GB",
-        "imagem": "img/produtos/smartphone.jpg",
-        "categoria": "eletrônicos"
+        "nome": "Whey Protein",
+        "preco": 99.99,
+        "descricao": "Pote de 1kg de Whey Protein da Marca CADSPM",
+        "imagem": "img/imgProdutos/produto1.jpg"
       },
       {
         "id": 2,
-        "nome": "Notebook Dell Inspiron",
-        "preco": 3299.99,
-        "descricao": "Notebook com Intel i5, 8GB RAM, SSD 256GB e tela 15.6\"",
-        "imagem": "img/imgProdutos/produto3.jpg",
-        "categoria": "eletrônicos"
+        "nome": "Creatina",
+        "preco": 65.99,
+        "descricao": "500g de creatina da marca CADSPM",
+        "imagem": "img/imgProdutos/produto2.jpg"
       },
       {
         "id": 3,
-        "nome": "Tênis Nike Air Max",
-        "preco": 399.99,
-        "descricao": "Tênis esportivo confortável para corrida e academia",
-        "imagem": "img/imgProdutos/produto1.jpg",
-        "categoria": "esportes"
-      },
-      {
-        "id": 4,
-        "nome": "Cafeteira Expresso",
-        "preco": 899.99,
-        "descricao": "Cafeteira automática com moedor integrado",
-        "imagem": "img/imgProdutos/produto2.jpg",
-        "categoria": "eletrodomésticos"
+        "nome": "BCAA",
+        "preco": 29.99,
+        "descricao": "60 capsulas de BCAA da marca CADSPM",
+        "imagem": "img/imgProdutos/produto3.jpg"
       }
     ]
   }
