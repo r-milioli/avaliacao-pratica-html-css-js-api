@@ -1,11 +1,10 @@
 *{
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
     list-style: none;
-    
 }
 
 .decor-cabecalho{
@@ -95,4 +94,166 @@
     height: 3px;
     background-color: #e1a543;
     border-radius: 2px;
+}
+
+/* Hero Section */
+.hero {
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/banner/Leonardo_Phoenix_10_Hero_section_banner_image_169_aspect_ratio_0.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    padding: 40px 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    opacity: 0.9;
+}
+
+.btn-hero {
+    background: linear-gradient(45deg, #e1a543, #f4b942);
+    color: white;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(225, 165, 67, 0.3);
+}
+
+.btn-hero:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(225, 165, 67, 0.4);
+    background: linear-gradient(45deg, #f4b942, #e1a543);
+}
+
+/* Responsividade para o Hero */
+@media (max-width: 768px) {
+    .hero {
+        height: 500px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    
+    .btn-hero {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}
+
+
+/* Seção de Produtos */
+.produtos {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.produtos-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.produtos-content h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.produtos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.produto {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.produto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.produto h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.produto h4 {
+    font-size: 1.5rem;
+    color: #e1a543;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.produto p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.btn-produto {
+    background: linear-gradient(45deg, #e1a543, #f4b942);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-produto:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(225, 165, 67, 0.4);
 }
