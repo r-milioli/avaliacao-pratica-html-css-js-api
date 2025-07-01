@@ -41,10 +41,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 10%;
-    width: 1200px;
+    padding: 10px 5%;
+    max-width: 1200px;
     height: 80px;
     margin: 0 auto;
+    position: relative;
 }
 
 .logo{
@@ -56,23 +57,60 @@
     height: auto;
 }
 
+/* Menu hambúrguer */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1000;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+/* Animação do hambúrguer para X */
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Menu navegação */
 .menu{
-    display: block;
+    display: flex;
     gap: 20px;
 }
 
+.menu ul {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
 .menu li{
-    display: inline-block;
-    margin-right: 20px;
     position: relative;
 }
 
 .menu li a{
     color: #000;
     font-size: 16px;
-    padding: 10px 5px;
+    padding: 10px 15px;
     display: block;
     transition: color 0.3s ease;
+    white-space: nowrap;
 }
 
 .menu li a:hover{
@@ -89,8 +127,9 @@
     content: '';
     position: absolute;
     bottom: -5px;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
     height: 3px;
     background-color: #e1a543;
     border-radius: 2px;
@@ -242,8 +281,109 @@
     background: linear-gradient(45deg, #f4b942, #e1a543);
 }
 
-/* Responsividade para o Hero */
+/* Responsividade para Tablets */
+@media (max-width: 1024px) {
+    .cabecalho {
+        padding: 10px 3%;
+    }
+    
+    .menu ul {
+        gap: 15px;
+    }
+    
+    .menu li a {
+        padding: 10px 12px;
+        font-size: 15px;
+    }
+}
+
+/* Responsividade para Mobile */
 @media (max-width: 768px) {
+    /* Cabeçalho Responsivo */
+    .cabecalho {
+        padding: 10px 20px;
+        height: 70px;
+    }
+    
+    .logo img {
+        width: 120px;
+    }
+    
+    /* Mostrar menu hambúrguer */
+    .menu-toggle {
+        display: flex;
+    }
+    
+    /* Overlay do menu móvel */
+    .menu::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0,0,0,0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: -1;
+    }
+    
+    .menu.active::before {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    /* Menu móvel */
+    .menu {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 300px;
+        height: calc(100vh - 70px);
+        background: white;
+        transition: right 0.3s ease;
+        z-index: 999;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    }
+    
+    .menu.active {
+        right: 0;
+    }
+    
+    .menu ul {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 0;
+        height: 100%;
+    }
+    
+    .menu li {
+        width: 100%;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .menu li:last-child {
+        border-bottom: none;
+    }
+    
+    .menu li a {
+        padding: 20px 0;
+        font-size: 18px;
+        width: 100%;
+        text-align: left;
+    }
+    
+    .menu li.ativo::after {
+        bottom: 0;
+        left: 0;
+        transform: none;
+        width: 4px;
+        height: 100%;
+        border-radius: 0;
+    }
+    
+    /* Hero Section */
     .hero {
         height: 500px;
     }
@@ -274,6 +414,48 @@
     .dot {
         width: 10px;
         height: 10px;
+    }
+    
+    /* Produtos responsivo */
+    .produtos-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .produto {
+        padding: 15px;
+    }
+    
+    .produto img {
+        height: 120px;
+    }
+}
+
+/* Responsividade para dispositivos pequenos */
+@media (max-width: 480px) {
+    .menu {
+        width: 100%;
+    }
+    
+    .cabecalho {
+        padding: 10px 15px;
+    }
+    
+    .logo img {
+        width: 100px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .btn-hero {
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
 }
 

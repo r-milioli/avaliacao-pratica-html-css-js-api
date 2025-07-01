@@ -150,7 +150,51 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.getElementsByClassName("slide-sobre").length > 0) {
         setInterval(autoSlideSobre, 6000);
     }
+    
+    // Inicializar menu responsivo
+    initMenuMobile();
 });
+
+//==================================================================================================
+
+// Menu Responsivo
+function initMenuMobile() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    const menuLinks = document.querySelectorAll('.menu a');
+    
+    if (menuToggle && menu) {
+        // Toggle do menu
+        menuToggle.addEventListener('click', function() {
+            menuToggle.classList.toggle('active');
+            menu.classList.toggle('active');
+        });
+        
+        // Fechar menu ao clicar em um link
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                menuToggle.classList.remove('active');
+                menu.classList.remove('active');
+            });
+        });
+        
+        // Fechar menu ao clicar fora dele
+        document.addEventListener('click', function(e) {
+            if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
+                menuToggle.classList.remove('active');
+                menu.classList.remove('active');
+            }
+        });
+        
+        // Fechar menu ao redimensionar a tela
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                menuToggle.classList.remove('active');
+                menu.classList.remove('active');
+            }
+        });
+    }
+}
 
 //==================================================================================================
 
