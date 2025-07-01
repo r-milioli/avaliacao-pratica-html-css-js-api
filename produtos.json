@@ -3,22 +3,22 @@
       {
         "id": 1,
         "nome": "Whey Protein",
-        "preco": 1299.99,
-        "descricao": "Whey Protein",
+        "preco": 99.99,
+        "descricao": "Pote de 1kg de Whey Protein da Marca CADSPM",
         "imagem": "img/imgProduto/produto1.jpg"
       },
       {
         "id": 2,
-        "nome": "Creatine",
-        "preco": 2499.99,
-        "descricao": "Creatine",
+        "nome": "Creatina",
+        "preco": 65.99,
+        "descricao": "500g de creatina da marca CADSPM",
         "imagem": "img/imgProduto/produto2.jpg"
       },
       {
         "id": 3,
         "nome": "BCAA",
-        "preco": 299.99,
-        "descricao": "BCA",
+        "preco": 29.99,
+        "descricao": "60 capsulas de BCAA da marca CADSPM",
         "imagem": "img/imgProduto/produto3.jpg"
       }
     ]
