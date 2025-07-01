@@ -102,6 +102,58 @@ function iniciarSlider() {
 
 //==================================================================================================
 
+// Slider Institucional da Página Sobre
+let slideAtualIndex = 1;
+
+function mudarSlideSobre(n) {
+    mostrarSlideSobre(slideAtualIndex += n);
+}
+
+function slideAtualSobre(n) {
+    mostrarSlideSobre(slideAtualIndex = n);
+}
+
+function mostrarSlideSobre(n) {
+    let slides = document.getElementsByClassName("slide-sobre");
+    let dots = document.getElementsByClassName("dot-sobre");
+    
+    if (n > slides.length) {slideAtualIndex = 1}
+    if (n < 1) {slideAtualIndex = slides.length}
+    
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+    }
+    
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+    }
+    
+    if (slides[slideAtualIndex-1]) {
+        slides[slideAtualIndex-1].classList.add("active");
+    }
+    if (dots[slideAtualIndex-1]) {
+        dots[slideAtualIndex-1].classList.add("active");
+    }
+}
+
+// Auto slide para o slider institucional
+function autoSlideSobre() {
+    if (document.getElementsByClassName("slide-sobre").length > 0) {
+        slideAtualIndex++;
+        mostrarSlideSobre(slideAtualIndex);
+    }
+}
+
+// Iniciar auto slide quando a página carregar
+document.addEventListener('DOMContentLoaded', function() {
+    // Auto slide a cada 6 segundos apenas se estiver na página sobre
+    if (document.getElementsByClassName("slide-sobre").length > 0) {
+        setInterval(autoSlideSobre, 6000);
+    }
+});
+
+//==================================================================================================
+
 // Função para redes sociais
 function abrirRedeSocial(rede) {
     switch(rede) {

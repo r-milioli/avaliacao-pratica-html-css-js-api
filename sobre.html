@@ -28,8 +28,150 @@
     <main class="sobre-main">
         <div class="sobre-content">
             <h1>Sobre a Smart Shopping</h1>
-            <p>Somos uma loja online dedicada a oferecer os melhores produtos com qualidade e preços acessíveis para nossos clientes.</p>
-            <p>Nossa missão é facilitar suas compras online com uma experiência simples e segura.</p>
+            
+            <section class="introducao">
+                <p class="destaque">Bem-vindo à Smart Shopping, onde a tecnologia encontra a tradição do bom atendimento para criar uma experiência de compra única e personalizada.</p>
+            </section>
+
+            <section class="nossa-historia">
+                <h2>Nossa História</h2>
+                <p>Fundada em 2020, a Smart Shopping nasceu do sonho de democratizar o acesso a produtos de qualidade através do comércio eletrônico. O que começou como uma pequena loja online, cresceu e se tornou uma das principais referências em e-commerce no Brasil.</p>
+                
+                <p>Nossa jornada começou quando nossos fundadores perceberam que muitas pessoas enfrentavam dificuldades para encontrar produtos de qualidade com preços justos e entrega rápida. Foi então que decidimos criar uma plataforma que combinasse tecnologia avançada, variedade de produtos e atendimento humanizado.</p>
+                
+                <p>Ao longo dos anos, expandimos nosso catálogo, aprimoramos nossa logística e, mais importante, construímos relacionamentos duradouros com nossos clientes. Hoje, atendemos milhares de famílias em todo o país, sempre mantendo nosso compromisso com a excelência.</p>
+            </section>
+
+            <section class="slider-institucional">
+                <h2>Nossa Empresa em Imagens</h2>
+                <div class="slider-container-sobre">
+                    <div class="slide-sobre active">
+                        <img src="img/empresa/Flux_Dev_A_11_image_showing_a_group_of_professionals_in_white__3.jpg" alt="Equipe de profissionais da Smart Shopping">
+                        <div class="slide-caption">
+                            <h3>Nossa Equipe</h3>
+                            <p>Profissionais dedicados trabalhando para oferecer a melhor experiência</p>
+                        </div>
+                    </div>
+                    <div class="slide-sobre">
+                        <img src="img/empresa/Flux_Dev_A_11_image_of_a_scientist_or_technicians_hands_handli_2.jpg" alt="Tecnologia e inovação">
+                        <div class="slide-caption">
+                            <h3>Tecnologia e Inovação</h3>
+                            <p>Investimos constantemente em tecnologia para melhorar nossos serviços</p>
+                        </div>
+                    </div>
+                    <div class="slide-sobre">
+                        <img src="img/empresa/Flux_Dev_A_square_11_highresolution_image_of_a_modern_suppleme_2.jpg" alt="Produtos de qualidade">
+                        <div class="slide-caption">
+                            <h3>Produtos de Qualidade</h3>
+                            <p>Selecionamos cuidadosamente cada produto em nosso catálogo</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Botões de navegação -->
+                    <button class="slider-btn-sobre prev-sobre" onclick="mudarSlideSobre(-1)">❮</button>
+                    <button class="slider-btn-sobre next-sobre" onclick="mudarSlideSobre(1)">❯</button>
+                    
+                    <!-- Indicadores -->
+                    <div class="slider-dots-sobre">
+                        <span class="dot-sobre active" onclick="slideAtualSobre(1)"></span>
+                        <span class="dot-sobre" onclick="slideAtualSobre(2)"></span>
+                        <span class="dot-sobre" onclick="slideAtualSobre(3)"></span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="missao-visao-valores">
+                <div class="mvv-grid">
+                    <div class="mvv-item">
+                        <h3>🎯 Nossa Missão</h3>
+                        <p>Facilitar a vida dos nossos clientes oferecendo produtos de qualidade, preços competitivos e uma experiência de compra simples, segura e eficiente através da tecnologia.</p>
+                    </div>
+                    
+                    <div class="mvv-item">
+                        <h3>🔭 Nossa Visão</h3>
+                        <p>Ser reconhecida como a principal plataforma de e-commerce do Brasil, transformando a forma como as pessoas fazem compras online e criando valor para toda a cadeia.</p>
+                    </div>
+                    
+                    <div class="mvv-item valores-especiais">
+                        <h3>💎 Nossos Valores</h3>
+                        <ul>
+                            <li><strong>Transparência:</strong> Informações claras e honestas em todas as transações</li>
+                            <li><strong>Qualidade:</strong> Produtos cuidadosamente selecionados e verificados</li>
+                            <li><strong>Inovação:</strong> Sempre buscando melhorar a experiência do cliente</li>
+                            <li><strong>Sustentabilidade:</strong> Compromisso com práticas ambientalmente responsáveis</li>
+                            <li><strong>Respeito:</strong> Tratamento digno a clientes, parceiros e colaboradores</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="diferenciais">
+                <h2>Nossos Diferenciais</h2>
+                <div class="diferenciais-grid">
+                    <div class="diferencial-item">
+                        <span class="icone">🚀</span>
+                        <h4>Entrega Rápida</h4>
+                        <p>Sistema logístico otimizado para entregas em todo o Brasil com agilidade e segurança.</p>
+                    </div>
+                    
+                    <div class="diferencial-item">
+                        <span class="icone">🛡️</span>
+                        <h4>Compra Segura</h4>
+                        <p>Ambiente 100% seguro com certificados SSL e proteção total dos seus dados.</p>
+                    </div>
+                    
+                    <div class="diferencial-item">
+                        <span class="icone">💰</span>
+                        <h4>Melhores Preços</h4>
+                        <p>Negociação direta com fornecedores para garantir os preços mais competitivos do mercado.</p>
+                    </div>
+                    
+                    <div class="diferencial-item">
+                        <span class="icone">📞</span>
+                        <h4>Atendimento 24h</h4>
+                        <p>Suporte especializado disponível para ajudar você a qualquer hora do dia.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="compromisso">
+                <h2>Nosso Compromisso</h2>
+                <p>Na Smart Shopping, acreditamos que cada compra é uma oportunidade de criar uma experiência positiva. Por isso, trabalhamos incansavelmente para:</p>
+                
+                <div class="compromisso-lista">
+                    <div class="compromisso-item">
+                        <span>✅</span>
+                        <p>Garantir a autenticidade e qualidade de todos os produtos</p>
+                    </div>
+                    <div class="compromisso-item">
+                        <span>✅</span>
+                        <p>Oferecer preços justos e transparentes</p>
+                    </div>
+                    <div class="compromisso-item">
+                        <span>✅</span>
+                        <p>Proporcionar uma navegação intuitiva e agradável</p>
+                    </div>
+                    <div class="compromisso-item">
+                        <span>✅</span>
+                        <p>Manter comunicação clara e honesta</p>
+                    </div>
+                    <div class="compromisso-item">
+                        <span>✅</span>
+                        <p>Resolver rapidamente qualquer problema ou dúvida</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="call-to-action">
+                <div class="cta-box">
+                    <h3>Faça Parte da Nossa História</h3>
+                    <p>Junte-se a milhares de clientes satisfeitos que já descobriram a facilidade e segurança de comprar na Smart Shopping.</p>
+                    <div class="cta-buttons">
+                        <a href="index.html" class="btn-cta">Começar a Comprar</a>
+                        <a href="contato.html" class="btn-cta-outline">Entre em Contato</a>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
     
